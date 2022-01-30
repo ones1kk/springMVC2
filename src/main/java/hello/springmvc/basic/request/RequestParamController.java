@@ -58,7 +58,7 @@ public class RequestParamController {
     @ResponseBody
     @RequestMapping("/request-param-required")
     public String requestParamRequired(
-        @RequestParam(required = true) String username,
+        @RequestParam(required = true) String username, // 빈문자 통과
         @RequestParam(required = false) Integer age
     ) {
         log.info("username = {}, age = {}", username, age);
